@@ -1,0 +1,236 @@
+@charset "UTF-8";
+html {
+	overflow-y: scroll; /* IEへの対応 http://www.htmq.com/style/overflow-y.shtml */
+	/*Internet Explorerが独自に追加したプロパティ*/
+	/*画面に収まりきれなかったときにスクロールして表示することを許可するか否か*/
+}
+/* リセットおまじない--------------------------------- */
+
+body, h1, h2, h3, h4, h5, p, ul, ol, li, dl, dt, dd {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	background: #fff;
+	text-align: center;
+	font-size: 12px;
+	line-height: 1.4;
+	min-width: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+li {
+	list-style: none;
+}
+a {
+	outline: none;
+	color: inherit;
+    text-decoration: none;
+}
+img {
+	border: 0px;
+	vertical-align: bottom;
+}
+/* --------------------------------------------------- */
+
+body {
+	font-family: "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", "Meiryo", "HGPｺﾞｼｯｸM", "Osaka", "ＭＳ Ｐゴシック", sans-serif, Century Gothic, Arial;
+    color:#3b4043;
+    
+}
+
+h1{
+    font-size: 20px;
+    margin: 15px 0 25px;
+}
+h2{
+    font-size: 16px;
+    margin: 5px 0;
+}
+p{
+    text-align: left;
+}
+a{
+    display: block;
+}
+
+
+/* ---header--- */
+
+/* header{
+    width: 100%;
+    position: fixed;
+}
+
+header ul{
+display: none;
+}
+header .hum-menu {
+	position: absolute;
+	right: 0px;
+    top: 0px;
+    width: 40px;
+    height: 20px;
+	padding: 10px 0;
+	background: #3b4043;
+	text-align: center;
+}
+header .hum-menu span {
+	display: block;
+	width: 20px;
+	height: 2px;
+	background: #ffffff;
+	margin: 3px auto;
+} */
+.header-menu{
+    display: none;
+}
+/* ---section--- */
+section{
+    padding: 30px;
+}
+
+
+/* ---section1(first view)--- */
+
+#sec1-firstview{
+    background: url(../img/photo_01.png)no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+    padding-top: 50px;
+
+}
+#sec1-firstview p{
+    margin-bottom: 25px;
+    text-align: justify;
+}
+#sec1-firstview .btn{
+    width: 100px;
+    background-color:rgba(59, 64, 67,0.9);
+    color:#ffffff;
+    border: none;
+    font-size: 13px;
+    padding:10px 55px;
+    margin: 15px auto;
+    border-radius: 25px;
+    line-height: 20px;
+}
+
+/* ---section2(profile)--- */
+
+.profile-contents{
+    display: flex;
+    flex-direction: column-reverse;    
+}
+.profile-contents img{
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 10px;
+}
+
+/* ---sec3(portfolio)--- */
+.portfolio-content{
+margin: 0 auto 50px;
+}
+
+.portfolio-content img{
+ width: 250px;
+}
+
+/* ---sec4(newblog)--- */
+
+#sec4-newblog .blog-content{
+    display: flex;
+    text-align: left;
+    margin: 20px auto;
+    
+}
+#sec4-newblog .blog-content h2{
+    font-size: 12px;
+    text-align: left;
+}
+
+#sec4-newblog .blog-content img{
+    height: 60px;
+}
+
+#sec4-newblog .blog-content p{
+    display: none;
+}
+
+#sec4-newblog .blog-info{
+    width: 100%;
+    padding:0 10px;
+}
+#sec4-newblog .blog-info a{
+    font-size: 10px;
+    display: inline;
+}
+
+/* ---sec5(contact)--- */
+
+
+#sec5-contactform p{
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+#sec5-contactform .contact-form{
+width: 250px;
+margin: 0 auto;
+    }
+
+
+#sec5-contactform  dd{
+margin:5px 0 20px;
+}
+
+#sec5-contactform .contact-form dt{
+text-align: left;
+}
+
+#sec5-contactform input{
+    height: 20px;
+    width: 250px;
+    border:solid 1px #d3d3d3;
+   }
+ 
+#sec5-contactform textarea{
+    height: 200px;
+    width: 250px;
+    border:solid 1px #d3d3d3;
+   }
+ 
+
+#sec5-contactform .required{
+    background-color: #f45555;
+    color: #ffffff;
+    font-size: 10px;
+    margin-left: 5px;
+    padding: 3px 5px;
+}
+
+#sec5-contactform .submit-btn{ 
+    background-color:#3b4043;
+    color:#ffffff;
+    font-size: 14px;
+    padding:20px 50px;
+    margin: 20px;
+    line-height: 3px;
+}
+
+ /* ---footer--- */
+
+footer{
+    height: 40px;
+    background-color: #6f7579;
+
+}
+footer .copyright{
+    text-align: center;
+    font-size: 10px;
+    color: #ffffff;
+    line-height: 40px;
+}
+

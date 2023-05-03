@@ -1,0 +1,179 @@
+@import "variables";
+@import "common";
+@import "mixin";
+@import "modules";
+
+/* ---section1(first view)--- */
+#sec1-firstview{
+    height: 450px;
+    padding: 80px 0;
+    background: url(../img/aurora.jpg)no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+}
+#sec1-firstview h1{
+    padding:55px 0 0 0 ;
+}
+#sec1-firstview p{
+    width: 70%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+// main
+.main {
+    width: 100%;
+    margin: 0 auto;
+}
+.outdoors-wrap {
+    padding: 50px 40px;
+}
+.outdoors-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 640px;
+    margin: 36px auto 0;
+    padding: 0 12px;
+    background-color: #f3f3f3;
+    border-radius: 6px;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    &__content{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        padding:24px 0 12px 0;
+        line-height: 1.5;
+    }
+    &__txt {
+        font-weight: bold;
+    }
+    &__line {
+        background-color: rgb(93, 92, 92);
+        height: 0.8px;
+        width: 288px;
+    }
+}
+
+.outdoors-top a:hover {   /*マウスが上に乗っている状態*/
+	color:#0062ff;
+	// text-decoration: underline;
+}
+
+// sidebar
+.main-flex {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.top-wrap {
+    width: calc(100% - 136px);
+}
+
+
+
+/* ---sec4(newblog)--- */
+
+#sec4-newblog .blog-content{
+    display: flex;
+    text-align-last: center;   
+}
+
+#sec4-newblog .blog-content img{
+    width: 350px;
+    height: 250px;
+}
+#sec4-newblog .blog-info a{
+    display: inline-block;
+    padding: 0 10px;
+}
+
+ /* ---footer--- */
+footer{
+    height: 30px;
+    line-height: 30px;
+    background-color: #6f7579;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+
+}
+footer .copyright{
+    text-align: center;
+}
+
+#pagetop{
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+}
+
+// archive-outdoors
+.outdoors-content {
+    display: flex;
+    width: calc(100% - 136px);
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 24px;
+    // padding: 40px 0;
+    margin: 0 auto;
+}
+.outdoors-card {
+    width: 300px;
+    // aspect-ratio: 1;
+    background-color: #f3f3f3;
+    border-radius: 6px;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    padding: 8px;
+    &__img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    &__txt {
+        font-size: 16px;
+        text-align: start;
+    }
+}
+
+// single-outdoors.php
+.outdoors-single {
+    width: 600px;
+    // aspect-ratio: 1;
+    background-color: #f3f3f3;
+    border-radius: 6px;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    padding: 16px;
+    &__img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    &__txt {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: start;
+    }
+}
+
+// 
+
+.thumbnail img{
+    width: 100%;
+}
+
+p {
+    width: 100%;
+    word-break: break-all;
+}
+
+.thumnail .custom-img {
+    width: 800px;
+}
+
+.blog .blog-content img {
+    width: 100%;
+}
+
+
+
