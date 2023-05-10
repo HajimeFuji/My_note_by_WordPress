@@ -54,10 +54,10 @@ function create_post_type() {
             'has_archive' => true,  //アーカイブの一覧表示を有効化
             'menu_position' => 20,  //管理画面メニューでの表示位置
             'show_in_rest' => true,
-            'menu_icon' => 'dashicons-cart',
+            'menu_icon' => 'dashicons-hammer',
         ]
     );
-    register_post_type( 'outi',
+    register_post_type( 'ouchi',
     [
         'labels' => [
             'name' => 'おうちごと',   //管理画面での表示名
@@ -66,9 +66,21 @@ function create_post_type() {
         'has_archive' => true,  //アーカイブの一覧表示を有効化
         'menu_position' => 20,  //管理画面メニューでの表示位置
         'show_in_rest' => true,
-        'menu_icon' => 'dashicons-cart',
+        'menu_icon' => 'dashicons-groups',
     ]
-);
+    );
+    register_post_type( 'oniwa',
+    [
+        'labels' => [
+            'name' => 'おにわごと',   //管理画面での表示名
+        ],
+        'public' => true,   //公開許可
+        'has_archive' => true,  //アーカイブの一覧表示を有効化
+        'menu_position' => 20,  //管理画面メニューでの表示位置
+        'show_in_rest' => true,
+        'menu_icon' => 'dashicons-carrot',
+    ]
+    );
 }
 
 // ウィジェット有効化

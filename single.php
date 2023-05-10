@@ -1,27 +1,36 @@
 <?php get_header(); ?>
 
-<!-- main.main>article.article>.thumbnail+h1.head1 -->
 <main class="main">
-
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-    <article class="article">
-        <div class="thumbnail">
-            <?php if(has_post_thumbnail()): ?>
-                <?php the_post_thumbnail('large'); ?>
-            <?php endif; ?>
+    <div class="main-flex">
+        <div class="top-wrap">   
+            <section class="outdoors-wrap">
+                <div class="outdoors-content">
+                    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                        <div class="outdoors-single" >
+                            <h3><?php the_title(); ?></h3>
+                            <img class="outdoors-single__img" src="<?php the_field('blog_image'); ?>" alt="">
+                            <p class="outdoors-single__txt">場所：<?php the_field('blog_place'); ?></p>
+                            <p class="outdoors-single__txt">メンバー：<?php the_field('blog_member'); ?></p>
+                            <p class="outdoors-single__txt">メモ：<?php the_field('blog_memo'); ?></p>
+                            <a href="<?php the_field('blog_album'); ?> "target="_blank" rel="noopener noreferrer"><p class="outdoors-single__txt">アルバム</p></a>
+                        </div>
+                    <?php endwhile; ?><?php else : ?>
+                        <p>新着記事はありません</p>
+                    <?php endif; ?>
+                    <?php wp_reset_postdata(); ?>
+                </div>
+            </section>
         </div>
-        <h1 class="head1"><?php the_title(); ?></h1>
-        <?php the_date(); ?>
-        <?php the_category(); ?>
-        <?php the_content(); ?>
-        <?php echo get_the_permalink(); ?>
-    </article>
+        <div class="original-sidebar">
+            <div>
+                <?php get_sidebar(); ?>
+            </div>
+            <div>
+                <?php dynamic_sidebar('main-sidebar'); ?>
+            </div>
+        </div>
 
-    <?php endwhile; ?><?php else : ?>
-        <p>新着記事はありません</p>
-    <?php endif; ?>
-
+    </div>
 </main>
 
 <?php get_footer(); ?>

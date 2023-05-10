@@ -10,17 +10,25 @@
     <title><?php bloginfo('name'); ?></title>
 
     <?php wp_head(); ?>
-    </head>
+    
+</head>
 
 <body  class="drawer drawer--right">
     <header>
-        <nav class="header header-menu">
-            <?php 
-                wp_nav_menu( [
-                    'theme_location' => 'main-menu' 
-                    ] ); 
-            ?>
-        </nav>
+        <div class="header__pc">
+            <div class="header__text">
+                <p>My Activity Note</p>
+            </div>
+            <nav class="header header-menu">
+                <div>
+                    <?php 
+                        wp_nav_menu( [
+                            'theme_location' => 'main-menu' 
+                            ] ); 
+                    ?>
+                </div>
+            </nav>
+        </div>
         
         <button type="button" class="drawer-toggle drawer-hamburger">
             <span class="sr-only">toggle navigation</span>
