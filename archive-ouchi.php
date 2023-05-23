@@ -6,7 +6,7 @@
         <div class="top-wrap">   
             <section class="outdoors-wrap">
                 <h1>おうちごと</h1>
-                <div class="outdoors-content">
+                <div class="ouchi-content">
                     <?php
                         $args = [
                             'post_type' => 'ouchi', //カスタム投稿タイプ名
@@ -21,7 +21,8 @@
                             <tr>
                                 <th>日付</th>
                                 <th>イベント</th>
-                                <th>写真</th>
+                                <th>内容</th>
+                                <th>Photo</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -29,9 +30,12 @@
                             <?php if ($my_query -> have_posts()) : ?>
                                 <?php while ($my_query -> have_posts()) : $my_query -> the_post(); ?>
                                     <tr>
-                                        <th><h3><?php the_field('ouchi_date'); ?></h3></th>
+                                        <th><p><?php the_field('ouchi_date'); ?></p></th>
+                                        <th><p><?php the_title(); ?></p></th>
                                         <td><p><?php the_field('ouchi_task'); ?></p></td>
-                                        <td class="table-photo"><a href="<?php the_field('ouchi_photo'); ?> "target="_blank" rel="noopener noreferrer">写真</a></td>
+                                        <td class="table-photo">
+                                            <a href="<?php the_field('ouchi_photo'); ?> "target="_blank" rel="noopener noreferrer">link</a>
+                                        </td>
                                     </tr>
                                 <?php endwhile; ?>
                                 <?php else : ?>

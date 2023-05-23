@@ -12,6 +12,7 @@
                             <p class="outdoors-single__txt">日時：<?php the_field('outdoors_date'); ?></p>
                             <p class="outdoors-single__txt">場所：<?php the_field('outdoors_place'); ?></p>
                             <p class="outdoors-single__txt">メンバー：<?php the_field('outdoors_member'); ?></p>
+                            <p class="outdoors-single__txt">メモ：<?php the_field('outdoors_memo'); ?></p>
                             <a href="<?php the_field('outdoors_album'); ?> "target="_blank" rel="noopener noreferrer"><p class="outdoors-single__txt">アルバム</p></a>
                         </div>
                     <?php endwhile; ?><?php else : ?>

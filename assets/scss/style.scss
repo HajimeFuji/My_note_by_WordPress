@@ -9,7 +9,7 @@
     padding: 40px 0;
     background: url(../img/aurora.jpg)no-repeat center center;
     background-size: cover;
-    color: #ffffff;
+    color: $white;
 }
 #sec1-firstview h1{
     padding:55px 0 0 0 ;
@@ -57,7 +57,7 @@
 }
 
 .outdoors-top a:hover {   /*マウスが上に乗っている状態*/
-	color:#0062ff;
+	color:$blue;
 	// text-decoration: underline;
 }
 
@@ -77,25 +77,22 @@
 
 .blog-content {
     display: flex;
-    width: calc(100% - 136px);
+    width: 100%;
     justify-content: space-around;
     flex-wrap: wrap;
     column-gap: 16px;
     row-gap: 24px;
-    // padding: 40px 0;
     margin: 0 auto;
 }
 
 .blog-card {
     width: 300px;
-    // aspect-ratio: 1;
     background-color: #f3f3f3;
     border-radius: 6px;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
     padding: 8px;
     &__img {
-        width: 300px;
-        aspect-ratio: 1.33;
+        width: 100%;
         margin-bottom: 10px;
     }
     &__txt {
@@ -105,20 +102,6 @@
         align-items: center;
     }
 }
-
-// .blog-content{
-//     display: flex;
-//     text-align-last: center;   
-// }
-
-// #sec4-newblog .blog-content img{
-//     width: 350px;
-//     height: 250px;
-// }
-// #sec4-newblog .blog-info a{
-//     display: inline-block;
-//     padding: 0 10px;
-// }
 
  /* ---footer--- */
 footer{
@@ -159,7 +142,7 @@ footer .copyright{
     padding: 8px;
     &__img {
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 12px;
     }
     &__txt {
         font-size: 16px;
@@ -169,11 +152,12 @@ footer .copyright{
 
 // single-outdoors.php
 .outdoors-single {
-    width: 400px;
+    width: 600px;
     // aspect-ratio: 1;
     background-color: #f3f3f3;
     border-radius: 6px;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    margin-top: 40px;
     padding: 16px;
     &__img {
         width: 100%;
@@ -187,23 +171,29 @@ footer .copyright{
 }
 
 //archive-ouchi.php
+
+.ouchi-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .table_list thead th {
     background: #d8ca0c;
-    padding: 4px 16px;
+    padding: 4px 32px 2px;
     border-bottom:#FFF solid 1px;
-    color:#FFF;
+    color: $white;
     font-size: 16px;
-    font-weight: bold;
+    // font-weight: bold;
     @include mq(sp) {
         display: none;
     }
 }
 
 .table_list tbody th {
-	background:#e3dd88;
-	color: #0062ff;
+	// background:#e3dd88;
+	// color: #0062ff;
 	padding: 0 15px;
-	border-bottom:#FFF solid 1px;
+	border-bottom: $white solid 1px;
 	vertical-align:middle;
     @include mq(sp) {
         display: block;
@@ -215,20 +205,30 @@ footer .copyright{
 }
 
 .table_list tbody td {
-	background:#FFF;
+	// background:#FFF;
 	padding:5px 15px;
 	line-height: 1;
-	border-bottom:#3EB1C6 solid 1px;
+	// border-bottom:#3EB1C6 solid 1px;
 	vertical-align:middle;
     @include mq(sp) {
         display: block;
     }
 }
 
+.table_list tbody tr:nth-child(even){
+    background-color: $gray
+}
+
 td.table-photo {
     width: 10%;
     margin: auto;
+    font-weight: bold;
     text-align: center;
+}
+
+td.table-photo a:hover {   /*マウスが上に乗っている状態*/
+	color:#0062ff;
+	// text-decoration: underline;
 }
 
 //archive-oniwa.php
@@ -246,7 +246,7 @@ td.table-photo {
     }
     &__img {
         width: 100%;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
     }
     &__txt {
         font-size: 14px;

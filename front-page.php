@@ -15,13 +15,13 @@
         <div class="main-flex">
             <div class="top-wrap">   
                 <section class="outdoors-wrap">
-                    <h1>Outdoor活動</h1>
+                    <h1>Outdoor活動 -ランダム表示-</h1>
                     <div class="outdoors-top">
                             <?php
                                 $args = [
                                     'post_type' => 'outdoors', //カスタム投稿タイプ名
                                     'posts_per_page' => 6, //取得する投稿の件数
-                                    'orderby'   => 'date',
+                                    'orderby'   => 'rand',
                                 ];
                                 $my_query = new WP_Query( $args );
                             ?>
@@ -43,34 +43,35 @@
                 </section>
 
                 <section id="sec4-newblog" class="slide-bottom" data-plugin-options='{"speed":300,"reverse": false}'>
-                    <h1>新着記事</h1>
-                    <div class="brog-content">
-                            <?php
-                                $args = [
-                                    'post_type' => 'post', //ブログ投稿タイプ名
-                                    'posts_per_page' => 6, //取得する投稿の件数
-                                    'orderby'   => 'date',
-                                ];
-                                $my_query = new WP_Query( $args );
-                            ?>
-                            <?php if ($my_query -> have_posts()) : ?>
+                    <h1>記事 -ランダム表示-</h1>
+                    <div class="blog-content">
+                        <?php
+                            $args = [
+                                'post_type' => 'post', //ブログ投稿タイプ名
+                                'posts_per_page' => 6, //取得する投稿の件数
+                                'orderby'   => 'rand',
+                            ];
+                            $my_query = new WP_Query( $args );
+                        ?>
+                        <?php if ($my_query -> have_posts()) : ?>
                             <?php while ($my_query -> have_posts()) : $my_query -> the_post(); ?>
 
                             <a href="<?php the_permalink(); ?>">
                                 <div class="blog-card" >
                                     <div>
                                         <img class="blog-card__img" src="<?php the_field('blog_image'); ?>" alt="">
+                                    </div>
                                     <div>
-                                        <p class="blog-card__txt"><?php the_title(); ?></p>
-                                        <p class="blog-card__txt"><?php the_excerpt(); ?></p>
+                                        <p class="blog-card__txt"><?php the_field('blog_date'); ?>_<?php the_title(); ?></p>
+                                        <!-- <p class="blog-card__txt"><?php the_title(); ?></p> -->
+                                        <!-- <p class="blog-card__txt"><?php the_excerpt(); ?></p> -->
                                     </div>
                                 </div>
                             </a>
 
-                        <?php endwhile; ?><?php else : ?>
-
-                            <?php echo "表示する記事がありません"; ?>
-                    <?php endif; ?>
+                            <?php endwhile; ?><?php else : ?>
+                                <?php echo "表示する記事がありません"; ?>
+                        <?php endif; ?>
 
                     </div>
                 </section>

@@ -229,7 +229,7 @@ header li:hover {
 }
 
 .outdoors-top a:hover { /*マウスが上に乗っている状態*/
-  color: #0062ff;
+  color: #1767AC;
 }
 
 .main-flex {
@@ -248,7 +248,7 @@ header li:hover {
 
 .blog-content {
   display: flex;
-  width: calc(100% - 136px);
+  width: 100%;
   justify-content: space-around;
   flex-wrap: wrap;
   -moz-column-gap: 16px;
@@ -265,8 +265,7 @@ header li:hover {
   padding: 8px;
 }
 .blog-card__img {
-  width: 300px;
-  aspect-ratio: 1.33;
+  width: 100%;
   margin-bottom: 10px;
 }
 .blog-card__txt {
@@ -317,7 +316,7 @@ footer .copyright {
 }
 .outdoors-card__img {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .outdoors-card__txt {
   font-size: 16px;
@@ -325,10 +324,11 @@ footer .copyright {
 }
 
 .outdoors-single {
-  width: 400px;
+  width: 600px;
   background-color: #f3f3f3;
   border-radius: 6px;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  margin-top: 40px;
   padding: 16px;
 }
 .outdoors-single__img {
@@ -341,13 +341,17 @@ footer .copyright {
   text-align: start;
 }
 
+.ouchi-content {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .table_list thead th {
   background: #d8ca0c;
-  padding: 4px 16px;
+  padding: 4px 32px 2px;
   border-bottom: #FFF solid 1px;
-  color: #FFF;
+  color: #ffffff;
   font-size: 16px;
-  font-weight: bold;
 }
 @media screen and (max-width:599px) {
   .table_list thead th {
@@ -356,10 +360,8 @@ footer .copyright {
 }
 
 .table_list tbody th {
-  background: #e3dd88;
-  color: #0062ff;
   padding: 0 15px;
-  border-bottom: #FFF solid 1px;
+  border-bottom: #ffffff solid 1px;
   vertical-align: middle;
 }
 @media screen and (max-width:599px) {
@@ -373,10 +375,8 @@ footer .copyright {
 }
 
 .table_list tbody td {
-  background: #FFF;
   padding: 5px 15px;
   line-height: 1;
-  border-bottom: #3EB1C6 solid 1px;
   vertical-align: middle;
 }
 @media screen and (max-width:599px) {
@@ -385,10 +385,19 @@ footer .copyright {
   }
 }
 
+.table_list tbody tr:nth-child(even) {
+  background-color: #eee;
+}
+
 td.table-photo {
   width: 10%;
   margin: auto;
+  font-weight: bold;
   text-align: center;
+}
+
+td.table-photo a:hover { /*マウスが上に乗っている状態*/
+  color: #0062ff;
 }
 
 .oniwa-card {
@@ -405,7 +414,7 @@ td.table-photo {
 }
 .oniwa-card__img {
   width: 100%;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 .oniwa-card__txt {
   font-size: 14px;

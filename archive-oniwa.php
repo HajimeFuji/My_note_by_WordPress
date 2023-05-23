@@ -20,10 +20,11 @@
                         <?php while ($my_query -> have_posts()) : $my_query -> the_post(); ?>
                         <a href="<?php the_permalink(); ?>">
                             <div class="oniwa-card" >
-                                <P class="oniwa-card__title"><?php the_title(); ?></P>
+                                <!-- <P class="oniwa-card__title"><?php the_title(); ?></P> -->
                                 <img class="oniwa-card__img" src="<?php the_field('oniwa_image'); ?>" alt="">
-                                <p class="oniwa-card__txt">日時：<?php the_field('oniwa_date'); ?></p>
-                                <p class="oniwa-card__txt">場所：<?php the_field('oniwa_place'); ?></p>
+                                <h3 class="oniwa-card__txt"><?php the_field('oniwa_topic'); ?></h3>
+                                <h3 class="oniwa-card__txt">日時：<?php the_field('oniwa_date'); ?></h3>
+                                <h3 class="oniwa-card__txt">場所：<?php the_field('oniwa_place'); ?></h3>
                             </div>
                         </a>
 

@@ -7,7 +7,7 @@
                 <div class="outdoors-content">
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                         <div class="outdoors-single" >
-                            <h3><?php the_title(); ?></h3>
+                            <h3><?php the_field('blog_date'); ?>_<?php the_title(); ?></h3>
                             <img class="outdoors-single__img" src="<?php the_field('blog_image'); ?>" alt="">
                             <p class="outdoors-single__txt">場所：<?php the_field('blog_place'); ?></p>
                             <p class="outdoors-single__txt">メンバー：<?php the_field('blog_member'); ?></p>

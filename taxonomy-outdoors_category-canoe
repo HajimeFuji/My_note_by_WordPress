@@ -5,7 +5,7 @@
     <div class="main-flex">
         <div class="top-wrap">   
             <section class="outdoors-wrap">
-                <h1>野幌森林公園</h1>
+                <h1>カヌー</h1>
                 <div class="outdoors-content">
                     <?php
                         $args = [
@@ -15,7 +15,7 @@
                             'tax_query' => [
                                 [
                                   'taxonomy' => 'outdoors_category',
-                                  'terms' => ['nopporo'],
+                                  'terms' => ['canoe'],
                                   'field' => 'slug'
                                 ],
                             ],

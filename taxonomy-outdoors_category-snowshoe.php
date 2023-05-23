@@ -5,7 +5,7 @@
     <div class="main-flex">
         <div class="top-wrap">   
             <section class="outdoors-wrap">
-                <h1>Outdoor活動</h1>
+                <h1>スノーシュー</h1>
                 <div class="outdoors-content">
                     <?php
                         $args = [
