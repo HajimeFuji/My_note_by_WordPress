@@ -43,7 +43,7 @@ body {
 
 h1 {
   font-size: 36px;
-  margin: 40px;
+  margin: 24px;
 }
 
 h2 {
@@ -173,6 +173,40 @@ header li:hover {
   margin: 10px 0;
 }
 
+.returnbox {
+  position: fixed;
+  bottom: 40px;
+  right: 8px;
+}
+@media screen and (max-width:599px) {
+  .returnbox {
+    position: fixed;
+    bottom: 120px;
+    right: 6%;
+  }
+}
+
+.btn2 {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 36px;
+  background-color: #f2dbdb;
+  border-radius: 8px;
+}
+.btn2__text {
+  font-family: Hiragino sans;
+  font-size: 20px;
+  font-weight: 500;
+  color: #404040;
+}
+.btn2__logo {
+  width: 24px;
+  height: 13.5px;
+}
+
 /* ---section1(first view)--- */
 #sec1-firstview {
   height: 450px;
@@ -248,7 +282,7 @@ header li:hover {
 
 .blog-content {
   display: flex;
-  width: 100%;
+  width: 90%;
   justify-content: space-around;
   flex-wrap: wrap;
   -moz-column-gap: 16px;
@@ -298,7 +332,7 @@ footer .copyright {
 
 .outdoors-content {
   display: flex;
-  width: calc(100% - 136px);
+  width: 90%;
   justify-content: space-around;
   flex-wrap: wrap;
   -moz-column-gap: 16px;
@@ -341,6 +375,15 @@ footer .copyright {
   text-align: start;
 }
 
+.outdoors-single a {
+  color: #0062ff;
+}
+
+.outdoors-single a:hover { /*マウスが上に乗っている状態*/
+  color: #0062ff;
+  text-decoration: underline;
+}
+
 .ouchi-content {
   width: 80%;
   margin: 0 auto;
@@ -360,7 +403,7 @@ footer .copyright {
 }
 
 .table_list tbody th {
-  padding: 0 15px;
+  padding: 8px 8px;
   border-bottom: #ffffff solid 1px;
   vertical-align: middle;
 }
@@ -375,8 +418,8 @@ footer .copyright {
 }
 
 .table_list tbody td {
-  padding: 5px 15px;
-  line-height: 1;
+  padding: 8px 16px;
+  line-height: 1.2;
   vertical-align: middle;
 }
 @media screen and (max-width:599px) {
@@ -396,8 +439,13 @@ td.table-photo {
   text-align: center;
 }
 
+td.table-photo a {
+  color: #1767AC;
+}
+
 td.table-photo a:hover { /*マウスが上に乗っている状態*/
-  color: #0062ff;
+  color: #1767AC;
+  text-decoration: underline;
 }
 
 .oniwa-card {
@@ -419,5 +467,10 @@ td.table-photo a:hover { /*マウスが上に乗っている状態*/
 .oniwa-card__txt {
   font-size: 14px;
   text-align: start;
+}
+
+.blogpost-form-wrap {
+  margin: 0 auto;
+  padding-top: 80px;
 }
 /*# sourceMappingURL=style.css.map */

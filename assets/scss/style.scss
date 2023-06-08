@@ -77,7 +77,7 @@
 
 .blog-content {
     display: flex;
-    width: 100%;
+    width: 90%;
     justify-content: space-around;
     flex-wrap: wrap;
     column-gap: 16px;
@@ -127,7 +127,7 @@ footer .copyright{
 // archive-outdoors
 .outdoors-content {
     display: flex;
-    width: calc(100% - 136px);
+    width: 90%;
     justify-content: space-around;
     flex-wrap: wrap;
     column-gap: 16px;
@@ -170,6 +170,14 @@ footer .copyright{
     }
 }
 
+.outdoors-single a {   
+	color:#0062ff;
+}
+.outdoors-single a:hover {   /*マウスが上に乗っている状態*/
+	color:#0062ff;
+	text-decoration: underline;
+}
+
 //archive-ouchi.php
 
 .ouchi-content {
@@ -192,7 +200,7 @@ footer .copyright{
 .table_list tbody th {
 	// background:#e3dd88;
 	// color: #0062ff;
-	padding: 0 15px;
+	padding: 8px 8px;
 	border-bottom: $white solid 1px;
 	vertical-align:middle;
     @include mq(sp) {
@@ -206,8 +214,8 @@ footer .copyright{
 
 .table_list tbody td {
 	// background:#FFF;
-	padding:5px 15px;
-	line-height: 1;
+	padding:8px 16px;
+	line-height: 1.2;
 	// border-bottom:#3EB1C6 solid 1px;
 	vertical-align:middle;
     @include mq(sp) {
@@ -226,9 +234,12 @@ td.table-photo {
     text-align: center;
 }
 
+td.table-photo a {  
+	color:$blue;
+}
 td.table-photo a:hover {   /*マウスが上に乗っている状態*/
-	color:#0062ff;
-	// text-decoration: underline;
+	color:$blue;
+	text-decoration: underline;
 }
 
 //archive-oniwa.php
@@ -252,4 +263,10 @@ td.table-photo a:hover {   /*マウスが上に乗っている状態*/
         font-size: 14px;
         text-align: start;
     }
+}
+
+// 新規投稿
+.blogpost-form-wrap {
+    margin: 0 auto;
+    padding-top: 80px;
 }

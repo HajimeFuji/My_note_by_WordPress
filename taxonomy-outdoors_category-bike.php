@@ -5,7 +5,7 @@
     <div class="main-flex">
         <div class="top-wrap">   
             <section class="outdoors-wrap">
-                <h1>登山</h1>
+                <h1>サイクリング</h1>
                 <div class="outdoors-content">
                     <?php
                         $args = [
@@ -15,7 +15,7 @@
                             'tax_query' => [
                                 [
                                     'taxonomy' => 'outdoors_category',
-                                    'terms' => ['mountain'],
+                                    'terms' => ['bike'],
                                     'field' => 'slug'
                                 ],
                             ],

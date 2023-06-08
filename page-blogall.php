@@ -5,11 +5,11 @@
     <div class="main-flex">
         <div class="top-wrap">   
             <section class="outdoors-wrap">
-                <h1>おうちごと</h1>
+                <h1>投稿一覧</h1>
                 <div class="ouchi-content">
                     <?php
                         $args = [
-                            'post_type' => 'ouchi', //カスタム投稿タイプ名
+                            'post_type' => 'post', //投稿
                             'posts_per_page' => -1, //取得する投稿の件数
                             'orderby'   => 'date',
                         ];
@@ -30,11 +30,11 @@
                             <?php if ($my_query -> have_posts()) : ?>
                                 <?php while ($my_query -> have_posts()) : $my_query -> the_post(); ?>
                                     <tr>
-                                        <th><p><?php the_field('ouchi_date'); ?></p></th>
+                                        <th><p><?php the_field('blog_date'); ?></p></th>
                                         <td><p><?php the_title(); ?></p></td>
-                                        <td><p><?php the_field('ouchi_task'); ?></p></td>
+                                        <td><p><?php the_content(); ?></p></td>
                                         <td class="table-photo">
-                                            <a href="<?php the_field('ouchi_photo'); ?> "target="_blank" rel="noopener noreferrer">link</a>
+                                            <a href="<?php the_field('blog-album'); ?> "target="_blank" rel="noopener noreferrer">link</a>
                                         </td>
                                     </tr>
                                 <?php endwhile; ?>

@@ -14,9 +14,9 @@
                             'orderby'   => 'date',
                             'tax_query' => [
                                 [
-                                  'taxonomy' => 'outdoors_category',
-                                  'terms' => ['snowshoe'],
-                                  'field' => 'slug'
+                                    'taxonomy' => 'outdoors_category',
+                                    'terms' => ['snowshoe'],
+                                    'field' => 'slug'
                                 ],
                             ],
                         ];
@@ -27,10 +27,10 @@
                         <?php while ($my_query -> have_posts()) : $my_query -> the_post(); ?>
                         <a href="<?php the_permalink(); ?>">
                             <div class="outdoors-card" >
-                                <h3><?php the_title(); ?></h3>
+                                <!-- <h3><?php the_title(); ?></h3> -->
                                 <img class="outdoors-card__img" src="<?php the_field('outdoors_image'); ?>" alt="">
-                                <p class="outdoors-card__txt">日時：<?php the_field('outdoors_date'); ?></p>
-                                <p class="outdoors-card__txt">場所：<?php the_field('outdoors_place'); ?></p>
+                                <h3 class="outdoors-card__txt">日時：<?php the_field('outdoors_date'); ?></h3>
+                                <h3 class="outdoors-card__txt">場所：<?php the_field('outdoors_place'); ?></h3>
                                 <!-- <a href="<?php the_field('outdoors_album'); ?> "target="_blank" rel="noopener noreferrer"><p class="outdoors-card__txt">アルバム</p></a> -->
                             </div>
                         </a>

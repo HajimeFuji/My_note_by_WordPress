@@ -122,3 +122,38 @@ header li:hover{
         margin: 10px 0;
     }
 }
+
+.returnbox {
+    position: fixed;
+    bottom: 40px;
+    right: 0px;
+    @include mq(sp) {
+        position: fixed;
+        bottom: 120px;
+        right: 6%;
+    }
+}
+
+.btn2 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width:96px;
+    height: 36px;
+    background-color: #f2dbdb;
+    border-radius: 8px;
+    @include mq(sp){
+
+    }
+    &__text {
+        font-family: Hiragino sans;
+        font-size: 20px;
+        font-weight: 500;
+        color: $black;
+    }
+    &__logo {
+        width: 24px;
+        height: 13.5px;
+    }
+}

@@ -34,6 +34,13 @@
                     <?php wp_reset_postdata(); ?>
                 </div>
             </section>
+            <div class="returnbox">
+                <a class="btn2__text" href="#">
+                    <div class="btn2">
+                        <p class="btn2__text">page top</p>
+                    </div>
+                </a>
+            </div>
         </div>
         <div class="original-sidebar">
             <div>
