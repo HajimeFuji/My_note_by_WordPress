@@ -10,9 +10,14 @@
     background: url(../img/aurora.jpg)no-repeat center center;
     background-size: cover;
     color: $white;
+    @include mq(sp) {}
 }
 #sec1-firstview h1{
     padding:55px 0 0 0 ;
+    @include mq(sp) {
+        padding: 0;
+        margin: 0 auto;
+    }
 }
 #sec1-firstview p{
     width: 70%;
@@ -41,10 +46,14 @@
     &__content{
         display: flex;
         flex-flow: column;
-        // align-items: center;
         justify-content: center;
         padding:24px 0 12px 0;
         line-height: 1.5;
+        @include mq(sp) {
+            // align-items: center;
+            width: 100%;
+            margin: 0 auto;
+        }
     }
     &__txt {
         font-weight: bold;
@@ -53,6 +62,9 @@
         background-color: rgb(93, 92, 92);
         height: 0.8px;
         width: 288px;
+        @include mq(sp) {
+            width: 100pw;
+        }
     }
 }
 
@@ -68,6 +80,9 @@
 }
 .top-wrap {
     width: calc(100% - 136px);
+    @include mq(sp) {
+        width: 100%;
+    }
 }
 
 /* ---sec4(newblog)--- */
@@ -83,6 +98,10 @@
     column-gap: 16px;
     row-gap: 24px;
     margin: 0 auto;
+    @include mq(sp) {
+        display: block;
+        width: 100%;
+    }
 }
 
 .blog-card {
@@ -91,6 +110,10 @@
     border-radius: 6px;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
     padding: 8px;
+    @include mq(sp) {
+        width: 100%;
+        margin-bottom: 16px;
+    }
     &__img {
         width: 100%;
         margin-bottom: 10px;
@@ -250,6 +273,9 @@ td.table-photo a:hover {   /*マウスが上に乗っている状態*/
     border-radius: 6px;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
     padding: 6px;
+    @include mq(sp) {
+        width: 100%;
+    }
     &__title {
         font-size: 16px;
         font-weight: bold;

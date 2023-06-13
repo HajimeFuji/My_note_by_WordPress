@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php 
+/*
+Template Name: ヘッダーレステンプレート
+Template Post Type: page, post
+*/
+?>
+
+<?php get_header("noheader"); ?>
+
 
 <article>
     <section id="sec1-firstview">

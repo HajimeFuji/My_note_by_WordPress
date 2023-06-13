@@ -60,6 +60,10 @@ header li:hover{
     font-size: 16px;
     padding:16px 55px;
     margin: 25px;
+    @include mq(sp) {
+        width: 160px;
+        margin: 8px;
+    }
 }
 #sec1-firstview .btn:hover{
     background-color: #3b4043;
@@ -114,10 +118,18 @@ header li:hover{
     width: 136px;
     background-color: #f2dbdb;
     padding: 96px 32px 32px;
+    @include mq(sp) {
+        display: flex;
+        display: none;
+    }
 }
 
 .side {
     padding: 0 0 16px;
+    @include mq(sp) {
+        display: flex;
+        display: none;
+    }
     &__headline {
         margin: 10px 0;
     }
@@ -129,8 +141,8 @@ header li:hover{
     right: 0px;
     @include mq(sp) {
         position: fixed;
-        bottom: 120px;
-        right: 6%;
+        bottom: 40px;
+        right: 2%;
     }
 }
 

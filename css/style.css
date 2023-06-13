@@ -109,6 +109,12 @@ header li:hover {
   padding: 16px 55px;
   margin: 25px;
 }
+@media screen and (max-width:599px) {
+  #sec1-firstview .btn {
+    width: 160px;
+    margin: 8px;
+  }
+}
 
 #sec1-firstview .btn:hover {
   background-color: #3b4043;
@@ -165,9 +171,21 @@ header li:hover {
   background-color: #f2dbdb;
   padding: 96px 32px 32px;
 }
+@media screen and (max-width:599px) {
+  .original-sidebar {
+    display: flex;
+    display: none;
+  }
+}
 
 .side {
   padding: 0 0 16px;
+}
+@media screen and (max-width:599px) {
+  .side {
+    display: flex;
+    display: none;
+  }
 }
 .side__headline {
   margin: 10px 0;
@@ -176,13 +194,13 @@ header li:hover {
 .returnbox {
   position: fixed;
   bottom: 40px;
-  right: 8px;
+  right: 0px;
 }
 @media screen and (max-width:599px) {
   .returnbox {
     position: fixed;
-    bottom: 120px;
-    right: 6%;
+    bottom: 40px;
+    right: 2%;
   }
 }
 
@@ -215,9 +233,14 @@ header li:hover {
   background-size: cover;
   color: #ffffff;
 }
-
 #sec1-firstview h1 {
   padding: 55px 0 0 0;
+}
+@media screen and (max-width:599px) {
+  #sec1-firstview h1 {
+    padding: 0;
+    margin: 0 auto;
+  }
 }
 
 #sec1-firstview p {
@@ -253,6 +276,12 @@ header li:hover {
   padding: 24px 0 12px 0;
   line-height: 1.5;
 }
+@media screen and (max-width:599px) {
+  .outdoors-top__content {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
 .outdoors-top__txt {
   font-weight: bold;
 }
@@ -260,6 +289,11 @@ header li:hover {
   background-color: rgb(93, 92, 92);
   height: 0.8px;
   width: 288px;
+}
+@media screen and (max-width:599px) {
+  .outdoors-top__line {
+    width: 100pw;
+  }
 }
 
 .outdoors-top a:hover { /*マウスが上に乗っている状態*/
@@ -273,6 +307,11 @@ header li:hover {
 
 .top-wrap {
   width: calc(100% - 136px);
+}
+@media screen and (max-width:599px) {
+  .top-wrap {
+    width: 100%;
+  }
 }
 
 /* ---sec4(newblog)--- */
@@ -290,6 +329,12 @@ header li:hover {
   row-gap: 24px;
   margin: 0 auto;
 }
+@media screen and (max-width:599px) {
+  .blog-content {
+    display: block;
+    width: 100%;
+  }
+}
 
 .blog-card {
   width: 300px;
@@ -297,6 +342,12 @@ header li:hover {
   border-radius: 6px;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
   padding: 8px;
+}
+@media screen and (max-width:599px) {
+  .blog-card {
+    width: 100%;
+    margin-bottom: 16px;
+  }
 }
 .blog-card__img {
   width: 100%;
@@ -454,6 +505,11 @@ td.table-photo a:hover { /*マウスが上に乗っている状態*/
   border-radius: 6px;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
   padding: 6px;
+}
+@media screen and (max-width:599px) {
+  .oniwa-card {
+    width: 100%;
+  }
 }
 .oniwa-card__title {
   font-size: 16px;
