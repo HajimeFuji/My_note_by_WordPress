@@ -16,9 +16,9 @@ function add_sakura_files(){
     // wp_enqueue_script( $handle, $src, $deps, $ver, $in_footer );
     wp_enqueue_script("sakura-script-jquery", SAKURA_DIR.'/assets/js/jquery-3.2.1.min.js',null,"3.2.1",false );
 
-    wp_enqueue_script("sakura-script-iscroll", "https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js", ["sakura-script-jquery"], "5.2.0",false );
+    wp_enqueue_script("sakura-script-iscroll", "https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js", ["sakura-script-jquery"], "5.2.0",true );
 
-    wp_enqueue_script("sakura-script-drawer", "https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js",["sakura-script-iscroll"],"3.2.2",false );
+    wp_enqueue_script("sakura-script-drawer", "https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js",["sakura-script-iscroll"],"3.2.2",true );
 
     wp_enqueue_script("sakura-script-common", SAKURA_DIR.'/assets/js/common.js',["sakura-script-drawer"],"1.0.0",false );
 }
@@ -36,6 +36,7 @@ function sakura_theme_setup() {
         //'「メニューの位置」の識別子' => 'メニューの説明の文字列',
             'main-menu' => 'Main Menu',
             'footer-menu'  => 'Footer Menu',
+            'drawer-menu'  => 'Drawer Menu',
         ) );
 }
 // アクションフックの実行

@@ -40,8 +40,6 @@ Template Post Type: page, post
                                     <a href="<?php the_permalink(); ?>">
                                         <div class="outdoors-top__content" >
                                             <p class="outdoors-top__txt"><?php the_field('outdoors_date'); ?>_<?php the_title(); ?></p>
-                                            <!-- <p class="outdoors-top__txt">日時：<?php the_field('outdoors_date'); ?></p>
-                                            <p class="outdoors-top__txt">場所：<?php the_field('outdoors_place'); ?></p> -->
                                             <div class="outdoors-top__line"></div>
                                         </div>
                                     </a>

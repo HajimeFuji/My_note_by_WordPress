@@ -7,6 +7,9 @@ header{
     background-color:#3b4043;
     position: fixed;
     z-index: 10;
+    @include mq(sp) {
+        display: none;
+    }
 }
 
 .header__pc {
@@ -48,7 +51,42 @@ header li:hover{
 }
 
 .drawer-hamburger{
-    display: none;
+    margin-top: 50px;
+    // display: none;
+    // @include mq(sp) {
+    //     display: block;
+    // }
+}
+
+.drawer-nav {
+    @include mq(sp) {
+        background: #666;
+        box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.12);
+        z-index: 10;
+    }
+}
+
+.drawer-nav .drawer-menu-item {
+    @include mq(sp) {
+	    padding: 0;
+    }
+}
+
+.drawer-nav .drawer-menu-item > a {
+    @include mq(sp) {
+        display: block;
+        padding: 1rem 1rem 1rem 2.5rem;
+        padding: 1rem;
+        text-decoration: none;
+        color: #fff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    }
+}
+
+.drawer--left.drawer-open .drawer-hamburger {
+    @include mq(sp) {
+	    left: 0;
+    }
 }
 
 // sec.1 btn

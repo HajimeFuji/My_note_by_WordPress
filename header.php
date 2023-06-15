@@ -13,7 +13,8 @@
     
 </head>
 
-<body  class="drawer drawer--right">
+<!-- <body  class="drawer drawer--right"> -->
+<body <?php body_class( ['drawer', 'drawer--left'] ); ?>>
     <header>
         <div class="header__pc">
             <div class="header__text">
@@ -38,7 +39,7 @@
         <nav class="drawer-nav" role="navigation">
             <?php 
                 wp_nav_menu( [
-                    'theme_location' => 'main-menu' 
+                    'theme_location' => 'drawer-menu', 'menu_class' => 'drawer-menu', 'container' => false, 'depth' => 1 
                     ] ); 
             ?>
         </nav>
