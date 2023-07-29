@@ -8,17 +8,18 @@
                     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
                         <div class="outdoors-single" >
                             <h2><?php the_field('blog_date'); ?>_<?php the_title(); ?></h2>
+                            <!-- <div class="single_thumbnail"> -->
+                                <!-- <?php the_post_thumbnail(array(600,450)); ?> -->
+                                <!-- <?php the_post_thumbnail( 'thumbnails', array( 'class' => 'thumb')); ?>
+                            </div> -->
+                            
+                            <div class="thumb">
+                                <?php the_post_thumbnail( 'full' ); ?>
+                            </div>
                             <div class="outdoors-single__txt">
                                 <?php the_content(); ?>
                             </div>
                             <a href="<?php the_field('blog_album'); ?> "target="_blank" rel="noopener noreferrer"><p class="outdoors-single__txt">アルバム</p></a>
-                            <?php the_post_thumbnail(array(600,450)); ?>
-                            <!-- <img class="outdoors-single__img" src="<?php the_field('blog_image'); ?>" alt=""> -->
-                            <!-- <p class="outdoors-single__txt">場所：<?php the_field('blog_place'); ?></p> -->
-                            <!-- <p class="outdoors-single__txt">メンバー：<?php the_field('blog_member'); ?></p> -->
-
-                            <!-- <p class="outdoors-single__txt">メモ：<?php the_field('blog_memo'); ?></p> -->
-
                         </div>
                     <?php endwhile; ?><?php else : ?>
                         <p>新着記事はありません</p>

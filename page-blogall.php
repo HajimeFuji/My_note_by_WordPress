@@ -31,10 +31,18 @@
                                 <?php while ($my_query -> have_posts()) : $my_query -> the_post(); ?>
                                     <tr>
                                         <th><p><?php the_field('blog_date'); ?></p></th>
-                                        <td><p><?php the_title(); ?></p></td>
-                                        <td><p><?php the_content(); ?></p></td>
+                                        <td>
+                                            <a href="<?php the_permalink(); ?>">
+                                                <p><?php the_title(); ?></p>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <a href="<?php the_permalink(); ?>">
+                                                <p><?php the_content(); ?></p>
+                                            </a>
+                                        </td>
                                         <td class="table-photo">
-                                            <a href="<?php the_field('blog-album'); ?> "target="_blank" rel="noopener noreferrer">link</a>
+                                        <a href="<?php the_field('blog_album'); ?> "target="_blank" rel="noopener noreferrer"><p class="outdoors-single__txt">アルバム</p></a>
                                         </td>
                                     </tr>
                                 <?php endwhile; ?>

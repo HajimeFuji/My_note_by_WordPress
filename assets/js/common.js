@@ -41,11 +41,15 @@ $(function(){
 
 
 
-   // スライドイン
-$(window).fadeThis();
+    // スライドイン
+  $(window).fadeThis();
 
-//ドロワーメニュー
-$(".drawer").drawer();
+  //ドロワーメニュー
+  // $(".drawer").drawer();
+});
+
+jQuery( function( $ ) {
+	$( '.drawer' ).drawer();
 });
 
 

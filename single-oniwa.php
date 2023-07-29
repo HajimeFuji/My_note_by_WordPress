@@ -11,6 +11,7 @@
                             <img class="outdoors-single__img" src="<?php the_field('oniwa_image'); ?>" alt="">
                             <p class="outdoors-single__txt">日時：<?php the_field('oniwa_date'); ?></p>
                             <p class="outdoors-single__txt">場所：<?php the_field('oniwa_place'); ?></p>
+                            <p class="outdoors-single__txt">メモ：<?php the_field('oniwa_memo'); ?></p>
                             <a href="<?php the_field('oniwa_album'); ?> "target="_blank" rel="noopener noreferrer"><p class="outdoors-single__txt">アルバム</p></a>
                         </div>
                     <?php endwhile; ?><?php else : ?>

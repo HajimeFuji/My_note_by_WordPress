@@ -34,7 +34,7 @@
                                         <td><p><?php the_title(); ?></p></td>
                                         <td><p><?php the_field('ouchi_task'); ?></p></td>
                                         <td class="table-photo">
-                                            <a href="<?php the_field('ouchi_photo'); ?> "target="_blank" rel="noopener noreferrer">link</a>
+                                            <a href="<?php the_field('ouchi_photo'); ?> "target="_blank" rel="noopener noreferrer"><p class="outdoors-single__txt">アルバム</p></a>
                                         </td>
                                     </tr>
                                 <?php endwhile; ?>

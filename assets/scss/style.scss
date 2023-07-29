@@ -32,6 +32,9 @@
 }
 .outdoors-wrap {
     padding: 50px 40px;
+    @include mq(sp) {
+        padding: 50px 20px;
+    }
 }
 .outdoors-top {
     display: flex;
@@ -63,7 +66,7 @@
         height: 0.8px;
         width: 288px;
         @include mq(sp) {
-            width: 100pw;
+            width: 90pw;
         }
     }
 }
@@ -156,6 +159,9 @@ footer .copyright{
     column-gap: 16px;
     row-gap: 24px;
     margin: 0 auto;
+    @include mq(sp) {
+        width: 100%;
+    }
 }
 .outdoors-card {
     width: 300px;
@@ -163,6 +169,9 @@ footer .copyright{
     border-radius: 6px;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
     padding: 8px;
+    @include mq(sp) {
+        width: 90vw;
+    }
     &__img {
         width: 100%;
         margin-bottom: 12px;
@@ -182,6 +191,9 @@ footer .copyright{
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
     margin-top: 40px;
     padding: 16px;
+    @include mq(sp) {
+        width: 90%;
+    }
     &__img {
         width: 100%;
         margin-bottom: 20px;
@@ -206,6 +218,9 @@ footer .copyright{
 .ouchi-content {
     width: 80%;
     margin: 0 auto;
+    @include mq(sp) {
+        width: 100%;
+    }
 }
 
 .table_list thead th {
@@ -228,6 +243,7 @@ footer .copyright{
 	vertical-align:middle;
     @include mq(sp) {
         display: block;
+        border-bottom: 0px;
     }
 }
 
@@ -243,11 +259,19 @@ footer .copyright{
 	vertical-align:middle;
     @include mq(sp) {
         display: block;
+        line-height: 1;
+        padding: 4px 16px;
     }
 }
 
 .table_list tbody tr:nth-child(even){
-    background-color: $gray
+    background-color: $gray;
+}
+
+.table_list tbody tr:nth-child(odd){
+    @include mq(sp) {
+        background-color: $gray;
+    }
 }
 
 td.table-photo {
@@ -255,6 +279,10 @@ td.table-photo {
     margin: auto;
     font-weight: bold;
     text-align: center;
+    @include mq(sp) {
+        margin: inherit;
+        width: 100%;
+    }
 }
 
 td.table-photo a {  
@@ -295,4 +323,17 @@ td.table-photo a:hover {   /*マウスが上に乗っている状態*/
 .blogpost-form-wrap {
     margin: 0 auto;
     padding-top: 80px;
+}
+
+// single.php表示
+
+.thumb{
+    text-align:center;
+}
+.thumb img{
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
+    margin-bottom: 20px;
 }

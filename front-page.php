@@ -57,7 +57,7 @@ Template Post Type: page, post
                             $args = [
                                 'post_type' => 'post', //ブログ投稿タイプ名
                                 'posts_per_page' => 6, //取得する投稿の件数
-                                'orderby'   => 'rand',
+                                'orderby'   => 'date',
                             ];
                             $my_query = new WP_Query( $args );
                         ?>

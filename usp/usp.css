@@ -4,14 +4,70 @@
 	Complete list of CSS selectors @ https://m0n.co/e
 */
 
-div#user-submitted-posts { display: flex; width: 100%; max-width: 800px; overflow: hidden; margin: 0 auto;}
-div#user-submitted-posts form { box-sizing: border-box; margin: 10px 100px; padding: 5px; width: 100%;}
-div#user-submitted-posts fieldset { box-sizing: border-box; margin: 10px 0; padding: 0; border: 0; }
+div#user-submitted-posts { 
+	display: flex; 
+	width: 100%; 
+	max-width: 800px; 
+	overflow: hidden; 
+	margin: 0 auto;
+}
+div#user-submitted-posts form { 
+	box-sizing: border-box; 
+	margin: 10px 100px; 
+	padding: 5px; 
+	width: 100%;
+}
+@media screen and (max-width: 480px) {
+	div#user-submitted-posts form { 
+		box-sizing: border-box; 
+		margin: 10px 20px; 
+		padding: 5px; 
+		width: 100%;
+	}
+}
+div#user-submitted-posts fieldset { 
+	box-sizing: border-box; 
+	margin: 10px 0; 
+	padding: 0; 
+	border: 0; 
+}
 
-div#user-submitted-posts fieldset label           { box-sizing: border-box; display: block; float: none; clear: both; width: 100%;  margin: 0; padding: 0; border: 0; font-size: 90%; }
-div#user-submitted-posts fieldset input.usp-input { box-sizing: border-box; display: block; float: none; clear: both; width: 100%;  margin: 0; line-height: 2;}
-div#user-submitted-posts textarea.usp-textarea    { box-sizing: border-box; display: block; float: none; clear: both; width: 100%; margin: 0; }
-div#user-submitted-posts select                   { box-sizing: border-box; display: block; float: none; clear: both; width: auto; margin: 0; }
+div#user-submitted-posts fieldset label { 
+	box-sizing: border-box; 
+	display: block; 
+	float: none; 
+	clear: both; 
+	width: 100%;  
+	margin: 0; 
+	padding: 0; 
+	border: 0; 
+	font-size: 90%; 
+}
+div#user-submitted-posts fieldset input.usp-input { 
+	box-sizing: border-box; 
+	display: block; 
+	float: none; 
+	clear: both; 
+	width: 100%;  
+	margin: 0; 
+	line-height: 2;
+}
+div#user-submitted-posts textarea.usp-textarea    { 
+	box-sizing: border-box; 
+	display: block; 
+	float: none; 
+	clear: both; 
+	width: 100%; 
+	margin: 0; 
+}
+div#user-submitted-posts select { 
+	box-sizing: border-box; 
+	display: block; 
+	float: none; 
+	clear: both; 
+	width: auto; 
+	margin: 0; 
+}
 
 div#user-submitted-posts select.usp-multiple { width: 100%; }
 
@@ -25,7 +81,10 @@ div#user-submitted-posts div.wp-editor-container { border: 1px solid #e5e5e5; }
 
 div#user-submitted-posts fieldset.usp-images { margin: 25px 0; }
 div#user-submitted-posts div#usp-upload-message { font-size: 90%; }
-div#user-submitted-posts fieldset input.usp-input.usp-clone { margin: 10px 0 0 0; font-size: 90%; }
+div#user-submitted-posts fieldset input.usp-input.usp-clone { 
+	margin: 10px 0 0; 
+	font-size: 90%; 
+}
 div#user-submitted-posts a#usp_add-another { display: inline-block; clear: both; margin: 10px 0 0 0; font-size: 90%; }
 div#user-submitted-posts div#usp-submit { margin: 20px 0; }
 

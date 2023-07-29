@@ -7,6 +7,7 @@ function add_sakura_files(){
     // cssの読み込み
     // wp_enqueue_style( $handle, $src, $deps, $ver, $media );
     wp_enqueue_style("sakura-drawer-style", "https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css", null, "3.2.2", "all" );
+    wp_enqueue_style('sakura-font-awesome-style', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), '4.7.0' );
     wp_enqueue_style("sakura-style", SAKURA_DIR.'/assets/css/style.css', ["sakura-drawer-style"], "1.0.0", );
 
     // wp_enqueue_style("sakura-style-pc", SAKURA_DIR.'/assets/css/style_pc.css', ["sakura-drawer-style"], "1.0.0", "screen and (min-width:769px)" );

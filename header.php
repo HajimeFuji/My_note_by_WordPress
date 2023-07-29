@@ -32,6 +32,7 @@
         </div>
         
         <button type="button" class="drawer-toggle drawer-hamburger">
+            <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
             <span class="sr-only">toggle navigation</span>
             <span class="drawer-hamburger-icon"></span>
         </button>
@@ -39,7 +40,10 @@
         <nav class="drawer-nav" role="navigation">
             <?php 
                 wp_nav_menu( [
-                    'theme_location' => 'drawer-menu', 'menu_class' => 'drawer-menu', 'container' => false, 'depth' => 1 
+                    'theme_location' => 'drawer-menu', 
+                    'menu_class' => 'drawer-menu', 
+                    // 'container' => false, 
+                    // 'depth' => 1 
                     ] ); 
             ?>
         </nav>

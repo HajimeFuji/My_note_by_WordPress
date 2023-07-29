@@ -76,7 +76,7 @@ else :
 		
 		<fieldset class="usp-custom-2">
 			<label for="user-submitted-custom-2"><?php echo esc_html($usp_custom_label_2); ?></label>
-			<input id="user-submitted-custom-2" name="<?php echo esc_attr($usp_custom_name_2); ?>" type="url" value="" placeholder="<?php echo esc_attr($usp_custom_label_2); ?>"<?php if (usp_check_required('custom_field_2')) echo $usp_required; ?> class="usp-input">
+			<input id="user-submitted-custom-2" name="<?php echo esc_attr($usp_custom_name_2); ?>" type="url" value="" placeholder="<?php echo esc_attr($usp_custom_label_2); ?>.(url)"<?php if (usp_check_required('custom_field_2')) echo $usp_required; ?> class="usp-input">
 		</fieldset>
 		<?php } if ($usp_options['usp_captcha'] == 'show') { ?>
 		
@@ -136,7 +136,8 @@ else :
 		
 		<fieldset class="usp-images">
 			<label for="user-submitted-image"><?php esc_html_e('Upload an Image', 'usp'); ?></label>
-			<div id="usp-upload-message"><?php esc_html_e($usp_options['upload-message'], 'usp'); ?></div>
+			<!-- <div id="usp-upload-message"><?php esc_html_e($usp_options['upload-message'], 'usp'); ?></div> -->
+			<div id="usp-upload-message">推奨サイズ: 600px x 450px</div>
 			<div id="user-submitted-image">
 			<?php // upload files
 				
@@ -154,7 +155,7 @@ else :
 				<?php if ($usp_minImages < $usp_maxImages) : echo $usp_addAnother; endif; ?>
 			<?php else : ?>
 				
-				<input name="user-submitted-image[]" type="file" size="25" class="usp-input usp-clone" data-parsley-excluded="true" accept="image/*">
+				<input name="user-submitted-image[]" type="file" size="25" class="usp-input usp-clone" data-parsley-excluded="false" accept="image/*">
 				<?php echo $usp_addAnother; ?>
 			<?php endif; ?>
 				
